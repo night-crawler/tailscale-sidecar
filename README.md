@@ -19,7 +19,7 @@ networks:
 
 services:
   sidecar:
-    image: tailscale-sidecar:latest
+    image: ghcr.io/night-crawler/tailscale-sidecar:main
     cap_add:
       - NET_ADMIN
     sysctls:
