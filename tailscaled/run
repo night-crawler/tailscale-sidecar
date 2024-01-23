@@ -1,0 +1,11 @@
+#!/command/with-contenv bash
+# shellcheck shell=bash
+
+set -ex
+
+tailscaled \
+  --state=/var/lib/tailscale/tailscaled.state \
+  --socket=/run/tailscale/tailscaled.sock \
+  --port=41641
+
+tailscale set --accept-dns=false
